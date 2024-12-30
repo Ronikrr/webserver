@@ -8,7 +8,6 @@ const multer = require("multer");
 const fs = require("fs");
 require('dotenv').config();
 
-// const teamRoutes = require('./teampage')
 
 const UserSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -32,7 +31,7 @@ console.log(secretKey)
 const app = express();
 const MONGO_URI = process.env.MONGO_URI;
 // Connect to MongoDB
-mongoose.connect(MONGO_URI)
+mongoose.connect('mongodb+srv://ronikgorasiya:aK4iWDp9RTGsKUs4@versal.tl3hi.mongodb.net/?retryWrites=true&w=majority&appName=versal')
     .then(() => {
         console.log('MongoDB connected successfully!');
     })
